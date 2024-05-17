@@ -1,6 +1,9 @@
 ##########################
 # KEDRO PROJECT
 
+*.parquet
+test.py
+
 # ignore all local configuration
 conf/local/**
 !conf/local/.gitkeep
