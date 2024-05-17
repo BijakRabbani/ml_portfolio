@@ -2,3 +2,19 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+stock_info:
+  group: raw
+  datatype:
+    type: parquet
+    args:
+      name: stock_info
+      group: raw 
+
+index_value_jci:
+  group: raw
+  datatype:
+    type: parquet
+    args:
+      name: index_value_jci
+      group: raw 
