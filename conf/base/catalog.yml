@@ -42,3 +42,11 @@ raw_market_data:
     args:
       name: raw_market_data
       group: raw 
+
+adj_close:
+  group: raw
+  datatype:
+    type: parquet
+    args:
+      name: adj_close
+      group: raw 
