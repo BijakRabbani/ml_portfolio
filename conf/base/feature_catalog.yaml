@@ -1,0 +1,177 @@
+logret_20:
+  group: label
+  datatype:
+    type: parquet
+    args:
+      name: logret_20 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 0
+      lag_end: -20
+
+mom_5:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_5 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 5
+      lag_end: 0
+
+mom_20:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_20 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 20
+      lag_end: 0
+
+mom_60:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_60 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 60
+      lag_end: 0
+
+mom_120:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_120 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 120
+      lag_end: 0
+
+mom_180:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_180 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 120
+      lag_end: 0
+
+mom_240:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_240 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 240
+      lag_end: 0
+
+mom_300:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_300 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 300
+      lag_end: 0
+
+mom_360:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: mom_360 
+      group: feature
+  function:
+    name: momentum
+    input: adj_close
+    args:
+      lag_start: 360
+      lag_end: 0
+
+vol_20:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: vol_20 
+      group: feature
+  function:
+    name: volatility
+    input: adj_close
+    args:
+      window: 20
+
+vol_60:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: vol_60 
+      group: feature
+  function:
+    name: volatility
+    input: adj_close
+    args:
+      window: 60
+
+vol_120:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: vol_120 
+      group: feature
+  function:
+    name: volatility
+    input: adj_close
+    args:
+      window: 120
+
+vol_240:
+  group: feature
+  datatype:
+    type: parquet
+    args:
+      name: vol_240 
+      group: feature
+  function:
+    name: volatility
+    input: adj_close
+    args:
+      window: 240

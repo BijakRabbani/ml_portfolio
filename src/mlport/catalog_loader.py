@@ -14,10 +14,14 @@ dataset_dict = {
 
 
 def load_catalog(date=None):
-    import os 
-    print(os.getcwd())
     with open('conf/base/catalog.yml') as stream:
         data_info = yaml.safe_load(stream)
+        
+    with open('conf/base/feature_catalog.yaml') as stream:
+        feature_info = yaml.safe_load(stream)
+    
+    data_info.update(feature_info)
+    
     catalog = {}
     for key in data_info:
         if 'args' in data_info[key]['datatype'].keys():

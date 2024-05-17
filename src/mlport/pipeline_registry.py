@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from kedro.framework.project import find_pipelines
 from kedro.pipeline import Pipeline
-import mlport.pipelines.raw as raw 
+from mlport.pipelines import raw, feature 
 
 
 def register_pipelines() -> dict[str, Pipeline]:
@@ -15,5 +15,6 @@ def register_pipelines() -> dict[str, Pipeline]:
     # pipelines = find_pipelines()
     pipelines = {}
     pipelines['raw'] = raw.create_pipeline()
+    pipelines['feature'] = feature.create_pipeline()
     pipelines["__default__"] = sum(pipelines.values())
     return pipelines
