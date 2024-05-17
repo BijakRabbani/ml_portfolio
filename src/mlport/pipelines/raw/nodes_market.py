@@ -17,7 +17,7 @@ def update_index_values(dropna: bool = True):
     data = data[['Adj Close']]
     data = data.reset_index()
     data.columns = ['date','index_values_jci']  
-    data['date'] = data['date'].dt.strftime('%Y-%m-%d')
+    # data['date'] = data['date'].dt.strftime('%Y-%m-%d')
     data = data.set_index('date')
     return data
 
@@ -26,11 +26,7 @@ def update_date_list(data: pd.DataFrame, dropna: bool = True):
     """
     Get trading date data
     """
-    dates = data[['date']]
-    if dropna:
-        dates = dates.dropna()
-    dates = dates.reset_index(drop=True)
-    dates.columns = ['date']    
+    dates = data.reset_index()[['date']]
     return dates
 
 

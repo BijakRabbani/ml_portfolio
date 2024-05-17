@@ -18,3 +18,11 @@ index_value_jci:
     args:
       name: index_value_jci
       group: raw 
+
+date_list:
+  group: raw
+  datatype:
+    type: parquet
+    args:
+      name: date_list
+      group: raw 

@@ -5,7 +5,7 @@ from .nodes_ksei import (
     update_stock_listed,
     )
 from .nodes_market import (
-#     update_date_list,
+    update_date_list,
     update_index_values,
 #     get_market_data,
 #     select,
@@ -30,12 +30,12 @@ def create_pipeline(**kwargs):
                 "index_value_jci",
                 name="index_value_jci",
             ),
-            # node(
-            #     update_date_list,
-            #     'index_value_jci',
-            #     "date_list",
-            #     name="date_list",
-            # ),
+            node(
+                update_date_list,
+                'index_value_jci',
+                "date_list",
+                name="date_list",
+            ),
             # node(
             #     update_stock_listed,
             #     ['listed', 'delisted', 'excluded', 'date_list'],
