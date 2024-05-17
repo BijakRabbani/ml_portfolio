@@ -6,23 +6,19 @@ from io import BytesIO
 from zipfile import ZipFile
 
 
-def update_stock_listed(listed, delisted, excluded, date_list):
+def update_stock_listed(stock_info, date_list):
     """
     Create an index which consist of date and all listed stocks for each date
     """
-    stock_list = listed['stock'].values
+    stock_list = stock_info['stock'].values
     stock_listed = pd.DataFrame(0, index=date_list['date'], columns=stock_list)
-    for _, row in listed.iterrows():
+    for _, row in stock_info.iterrows():
         stock_listed.loc[row['listing_date']:, row['stock']] = 1
-
-    for _, row in delisted.iterrows():
-        stock_listed.loc[row['date']:, row['stock']] = 0
 
     stock_listed = stock_listed.fillna(0)
     stock_listed = stock_listed.astype(int)
     stock_listed.columns.name = 'stock'
     stock_listed.index.name = 'date'
-    stock_listed = stock_listed.drop(excluded['stock'].values, axis=1)
     stock_listed = stock_listed.reset_index()
     
     index_ref = stock_listed.melt(id_vars='date', var_name='stock')

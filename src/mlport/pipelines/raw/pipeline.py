@@ -36,12 +36,12 @@ def create_pipeline(**kwargs):
                 "date_list",
                 name="date_list",
             ),
-            # node(
-            #     update_stock_listed,
-            #     ['listed', 'delisted', 'excluded', 'date_list'],
-            #     "stock_listed",
-            #     name="stock_listed",
-            # ),
+            node(
+                update_stock_listed,
+                ['stock_info','date_list'],
+                "stock_listed",
+                name="stock_listed",
+            ),
             # node(
             #     get_market_data,
             #     'stock_listed',

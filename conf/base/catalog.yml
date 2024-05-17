@@ -26,3 +26,11 @@ date_list:
     args:
       name: date_list
       group: raw 
+
+stock_listed:
+  group: raw
+  datatype:
+    type: parquet
+    args:
+      name: stock_listed
+      group: raw 
