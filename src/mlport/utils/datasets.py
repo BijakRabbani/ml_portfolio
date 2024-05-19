@@ -82,8 +82,10 @@ class IndexedParquetData(AbstractDataset):
 class ModelData(AbstractDataset):
     """
     """
-    def __init__(self, name: str, date: str):
+    def __init__(self, name: str, date):
         self.name = name
+        if date is not None:
+            date = np.datetime_as_string(date, unit='D')
         self.date = date
 
     def _load(self) -> pd.DataFrame:

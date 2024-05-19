@@ -50,3 +50,24 @@ adj_close:
     args:
       name: adj_close
       group: raw 
+
+linear_regression:
+  group: model
+  datatype:
+    type: model
+    args:
+      name: linear_regression
+  function:
+    input: 
+          - mom_5
+          - mom_20
+          - mom_60
+          - mom_120
+          - mom_180
+          - mom_240
+          - mom_300
+          - mom_360
+    target: logret_20
+    horizon: 20
+    training_horizon: 480
+    retrain_freq: 1

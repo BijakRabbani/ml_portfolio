@@ -6,12 +6,14 @@ from kedro.io import DataCatalog as dC
 from .utils.datasets import (
     ParquetData,
     IndexedParquetData,
+    ModelData,
     )
 import yaml
 
 dataset_dict = {
         'parquet': ParquetData,
         'indexed_parquet': IndexedParquetData,
+        'model': ModelData,
     }
 
 
