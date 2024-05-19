@@ -11,7 +11,7 @@ def update_index_values(dropna: bool = True):
     """
     Get JCI data from Yahoo Finance
     """
-    start_date = (dt.date.today() - relativedelta(year=10)).strftime('%Y-%m-%d')
+    start_date = (dt.date.today() - relativedelta(years=10)).strftime('%Y-%m-%d')
     data = yf.download(tickers='^JKSE', 
                        start=start_date,
                        interval="1d") 
