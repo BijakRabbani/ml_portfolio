@@ -1,7 +1,7 @@
 logret_20:
   group: label
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: logret_20 
       group: feature
@@ -15,7 +15,7 @@ logret_20:
 mom_5:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_5 
       group: feature
@@ -29,7 +29,7 @@ mom_5:
 mom_20:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_20 
       group: feature
@@ -43,7 +43,7 @@ mom_20:
 mom_60:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_60 
       group: feature
@@ -57,7 +57,7 @@ mom_60:
 mom_120:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_120 
       group: feature
@@ -71,7 +71,7 @@ mom_120:
 mom_180:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_180 
       group: feature
@@ -85,7 +85,7 @@ mom_180:
 mom_240:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_240 
       group: feature
@@ -99,7 +99,7 @@ mom_240:
 mom_300:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_300 
       group: feature
@@ -113,7 +113,7 @@ mom_300:
 mom_360:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: mom_360 
       group: feature
@@ -127,7 +127,7 @@ mom_360:
 vol_20:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: vol_20 
       group: feature
@@ -140,7 +140,7 @@ vol_20:
 vol_60:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: vol_60 
       group: feature
@@ -153,7 +153,7 @@ vol_60:
 vol_120:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: vol_120 
       group: feature
@@ -166,7 +166,7 @@ vol_120:
 vol_240:
   group: feature
   datatype:
-    type: parquet
+    type: indexed_parquet
     args:
       name: vol_240 
       group: feature

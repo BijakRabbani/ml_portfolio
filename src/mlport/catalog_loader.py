@@ -5,11 +5,13 @@ from kedro.io import AbstractDataset, MemoryDataset
 from kedro.io import DataCatalog as dC
 from .utils.datasets import (
     ParquetData,
+    IndexedParquetData,
     )
 import yaml
 
 dataset_dict = {
         'parquet': ParquetData,
+        'indexed_parquet': IndexedParquetData,
     }
 
 
@@ -29,7 +31,7 @@ def load_catalog(date=None):
         else:
             args = {}
             
-        if data_info[key]['datatype']['type'] in ['gcs_indexedparquet', 'model']:
+        if data_info[key]['datatype']['type'] in ['indexed_parquet', 'model']:
             args['date'] = date
             
         type_key = data_info[key]['datatype']['type']
